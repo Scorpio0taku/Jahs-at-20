@@ -1,0 +1,407 @@
+/* ============================================
+   Design tokens
+   ============================================ */
+:root {
+  --cork: #b9905e;
+  --cork-dark: #a17a49;
+  --paper: #fbf6ec;
+  --paper-edge: #efe6d6;
+  --ink: #3d2f22;
+  --ink-soft: #6b5a47;
+  --rose: #e2a6a1;
+  --sage: #9bb389;
+  --mustard: #e7b95f;
+  --shadow: rgba(61, 47, 34, 0.25);
+}
+
+/* ============================================
+   Reset / base
+   ============================================ */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+/* Corkboard background with a subtle speckled texture */
+.board {
+  min-height: 100vh;
+  background-color: var(--cork);
+  background-image:
+    radial-gradient(circle at 20% 30%, var(--cork-dark) 0.5px, transparent 1px),
+    radial-gradient(circle at 60% 75%, var(--cork-dark) 0.5px, transparent 1px),
+    radial-gradient(circle at 82% 20%, var(--cork-dark) 0.5px, transparent 1px),
+    radial-gradient(circle at 40% 90%, var(--cork-dark) 0.5px, transparent 1px);
+  background-size: 60px 60px, 80px 80px, 50px 50px, 70px 70px;
+  padding: 24px 16px 64px;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+.header {
+  max-width: 1000px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.title-card {
+  display: inline-block;
+  background: var(--paper);
+  padding: 18px 32px;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px var(--shadow);
+  margin-bottom: 24px;
+}
+
+.title-card h1 {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.name {
+  color: var(--rose);
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: var(--paper);
+  color: var(--ink);
+  border: none;
+  border-radius: 6px 6px 2px 2px;
+  padding: 10px 24px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tab:hover {
+  transform: translateY(-2px);
+}
+
+.tab.is-active {
+  box-shadow: 0 4px 0 var(--mustard), 0 6px 12px var(--shadow);
+  transform: translateY(-2px);
+}
+
+.tab:focus-visible,
+.lightbox-close:focus-visible,
+.video-placeholder:focus-visible {
+  outline: 3px solid var(--sage);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Panels
+   ============================================ */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.is-active {
+  display: block;
+  animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   Home
+   ============================================ */
+.home-note {
+  background: var(--paper);
+  max-width: 480px;
+  margin: 40px auto 24px;
+  padding: 32px;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px var(--shadow);
+  font-size: 1.1rem;
+}
+
+.home-note p { margin: 0 0 16px; }
+.home-note p:last-child { margin-bottom: 0; }
+
+.signoff {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.home-stickers {
+  text-align: center;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   Section titles
+   ============================================ */
+.section-title {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.8rem, 5vw, 2.75rem);
+  display: inline-block;
+  background: var(--paper);
+  padding: 8px 24px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px var(--shadow);
+  margin: 0 0 24px;
+}
+
+/* ============================================
+   Grid + cards
+   ============================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 32px 24px;
+  padding-bottom: 16px;
+}
+
+.grid--messages {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.card {
+  background: var(--paper);
+  padding: 12px 12px 16px;
+  border-radius: 2px;
+  box-shadow: 0 6px 14px var(--shadow);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.03) rotate(0deg);
+  box-shadow: 0 10px 22px var(--shadow);
+  z-index: 2;
+}
+
+.card-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 1px;
+  background: var(--paper-edge);
+}
+
+.card-media img,
+.card-media iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border: none;
+}
+
+.card-caption {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  margin: 10px 4px 2px;
+}
+
+.card-from {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin: 0 4px;
+}
+
+/* ============================================
+   Video placeholder (click-to-load)
+   ============================================ */
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: var(--ink);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+}
+
+.play-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.play-icon::after {
+  content: '';
+  border-style: solid;
+  border-width: 12px 0 12px 18px;
+  border-color: transparent transparent transparent var(--ink);
+  margin-left: 4px;
+}
+
+/* ============================================
+   Messages
+   ============================================ */
+.msg-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.msg-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.msg-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--paper-edge);
+}
+
+.msg-name {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.msg-text {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ============================================
+   Tape & pin accents (signature detail)
+   ============================================ */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 70px;
+  height: 28px;
+  transform: translateX(-50%) rotate(-4deg);
+  opacity: 0.85;
+  clip-path: polygon(
+    0% 15%, 6% 0%, 14% 18%, 22% 2%, 30% 16%, 38% 0%, 46% 14%,
+    54% 2%, 62% 18%, 70% 0%, 78% 16%, 86% 2%, 94% 14%, 100% 0%,
+    100% 85%, 94% 100%, 86% 82%, 78% 100%, 70% 84%, 62% 100%,
+    54% 86%, 46% 100%, 38% 84%, 30% 100%, 22% 86%, 14% 100%, 6% 84%, 0% 100%
+  );
+}
+
+.tape-rose::before { background: var(--rose); }
+.tape-sage::before { background: var(--sage); }
+.tape-mustard::before { background: var(--mustard); }
+
+.pin::before {
+  top: -9px;
+  width: 18px;
+  height: 18px;
+  clip-path: none;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff 0%, var(--rose) 40%, var(--ink-soft) 100%);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* ============================================
+   Rotation utilities
+   ============================================ */
+.rot-1 { transform: rotate(-2deg); }
+.rot-2 { transform: rotate(1.5deg); }
+.rot-3 { transform: rotate(-1deg); }
+.rot-4 { transform: rotate(2.5deg); }
+.rot-5 { transform: rotate(-3deg); }
+.rot-6 { transform: rotate(1deg); }
+
+/* ============================================
+   Lightbox
+   ============================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(61, 47, 34, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 24px;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--paper);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ============================================
+   Reduced motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .panel.is-active { animation: none; }
+  .tab, .card { transition: none; }
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 480px) {
+  .board { padding: 16px 10px 48px; }
+  .grid { gap: 28px 16px; }
+  .tab { padding: 8px 16px; font-size: 1.1rem; }
+}
