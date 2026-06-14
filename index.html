@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday! 🎉</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="board">
+
+    <header class="header">
+      <div class="title-card rot-2">
+        <h1>Happy Birthday, <span class="name">[Sister's Name]</span>! <span aria-hidden="true">✨</span></h1>
+      </div>
+      <nav class="tabs" role="tablist" aria-label="Site sections">
+        <button class="tab is-active" data-tab="home" role="tab" aria-selected="true" aria-controls="home">Home</button>
+        <button class="tab" data-tab="memories" role="tab" aria-selected="false" aria-controls="memories">Memories</button>
+        <button class="tab" data-tab="messages" role="tab" aria-selected="false" aria-controls="messages">Messages</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="panel is-active" role="tabpanel">
+        <div class="home-note rot-1">
+          <p>
+            We put this little corner of the internet together just for you —
+            full of photos, videos, and messages from the people who love you.
+          </p>
+          <p>
+            Tap <strong>Memories</strong> for photos and clips from everyone,
+            and <strong>Messages</strong> for notes from your friends.
+          </p>
+          <p class="signoff">Happy birthday! 🎂</p>
+        </div>
+        <div class="home-stickers" aria-hidden="true">
+          <span class="sticker rot-1">📸</span>
+          <span class="sticker rot-5">💌</span>
+          <span class="sticker rot-4">🎉</span>
+          <span class="sticker rot-3">💛</span>
+        </div>
+      </section>
+
+      <section id="memories" class="panel" role="tabpanel">
+        <h2 class="section-title rot-5">Memories</h2>
+        <div id="memories-grid" class="grid"></div>
+      </section>
+
+      <section id="messages" class="panel" role="tabpanel">
+        <h2 class="section-title rot-2">Messages</h2>
+        <div id="messages-grid" class="grid grid--messages"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
