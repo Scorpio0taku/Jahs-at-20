@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Login screen -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-card rot-1">
+      <div class="login-top-stripe"></div>
+      <h1 class="login-title">You're invited</h1>
+      <p class="login-sub">Enter your name and password to open the gift.</p>
+
+      <div class="login-field">
+        <label for="login-name">Your name</label>
+        <input id="login-name" type="text" autocomplete="name" placeholder="e.g. Sarah" />
+      </div>
+      <div class="login-field">
+        <label for="login-pass">Password</label>
+        <input id="login-pass" type="password" autocomplete="current-password" placeholder="••••••••" />
+      </div>
+
+      <p id="login-error" class="login-error" aria-live="polite"></p>
+      <p id="login-lockout" class="login-lockout" aria-live="polite"></p>
+
+      <button id="login-btn" class="login-btn">Open →</button>
+    </div>
+  </div>
+
+  <!-- Music player -->
+  <div class="music-bar" id="music-bar">
+    <button class="music-btn" id="music-toggle" aria-label="Play background music">
+      <span class="music-icon" id="music-icon">▶</span>
+    </button>
+    <span class="music-label">Birthday Mix</span>
+    <audio id="bg-audio" loop preload="auto">
+      <!-- Lovely Day - royalty-free lofi instrumental via Pixabay CDN -->
+      <source src="https://cdn.pixabay.com/audio/2024/11/13/audio_c27f5f8b50.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="board">
+
+    <header class="header">
+      <div class="title-card rot-2">
+        <h1>Happy Birthday, <span class="name">[Sister's Name]</span>!</h1>
+      </div>
+      <nav class="tabs" role="tablist" aria-label="Site sections">
+        <button class="tab is-active" data-tab="home"     role="tab" aria-selected="true"  aria-controls="home">Home</button>
+        <button class="tab"           data-tab="memories" role="tab" aria-selected="false" aria-controls="memories">Memories</button>
+        <button class="tab"           data-tab="wishes"   role="tab" aria-selected="false" aria-controls="wishes">Birthday Wishes</button>
+        <button class="tab"           data-tab="messages" role="tab" aria-selected="false" aria-controls="messages">Messages</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section id="home" class="panel is-active" role="tabpanel">
+        <div class="home-note rot-1">
+          <p>
+            We put this little corner of the internet together just for you —
+            full of photos, videos, and messages from the people who love you.
+          </p>
+          <p>
+            Explore <strong>Memories</strong> for photos and clips,
+            <strong>Birthday Wishes</strong> for personal video messages,
+            and <strong>Messages</strong> for notes from your friends.
+          </p>
+          <p class="signoff">Happy birthday!</p>
+        </div>
+        <div class="home-deco" aria-hidden="true">
+          <span class="deco-star">★</span>
+          <span class="deco-star small">★</span>
+          <span class="deco-star">★</span>
+        </div>
+      </section>
+
+      <!-- MEMORIES -->
+      <section id="memories" class="panel" role="tabpanel">
+        <h2 class="section-title rot-5">Memories</h2>
+        <div id="memories-grid" class="grid"></div>
+      </section>
+
+      <!-- BIRTHDAY WISHES (personal video messages) -->
+      <section id="wishes" class="panel" role="tabpanel">
+        <h2 class="section-title rot-2">Birthday Wishes</h2>
+        <div id="wishes-grid" class="grid grid--wishes"></div>
+      </section>
+
+      <!-- MESSAGES (written notes) -->
+      <section id="messages" class="panel" role="tabpanel">
+        <h2 class="section-title rot-3">Messages</h2>
+        <div id="messages-grid" class="grid grid--messages"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
