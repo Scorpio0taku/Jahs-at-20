@@ -9,9 +9,9 @@
 // IMPORTANT: keep this file private — don't share it publicly.
 // ============================================
 const guests = [
-  { name: 'Sarah',   password: 'sunshine22' },
-  { name: 'Marcus',  password: 'coolkid99'  },
-  { name: 'Priya',   password: 'birthday!'  }
+  { name: 'Jahsmine',   password: 'SEMILORE' },
+  { name: 'Torres',  password: 'semilore'  },
+  { name: 'Guest',   password: 'imtresspassing'  }
   // Add more guests here...
 ];
 
@@ -71,8 +71,8 @@ const wishes = [
 // ============================================
 const messages = [
   {
-    name: 'Example Friend',
-    message: 'Replace this with a real birthday message from a friend!'
+    name: 'Inioluwa Folowosele',
+    message: 'Happy birthday Jahsmine. I wish you all the best life has to offer. Keep shining❤️🎊'
   },
   {
     name: 'Another Friend',
