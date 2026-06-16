@@ -59,7 +59,7 @@ const wishes = [
   },
   {
     from: 'Another Friend',
-    embedUrl: 'https://drive.google.com/file/d/FILE_ID/preview',
+    embedUrl: 'https://drive.google.com/file/d/1lZ2YX10Btsss72nZF4w3gk3IGEwLwNBz/preview',
     note: 'Drive videos work here too — replace FILE_ID'
   }
 ];
