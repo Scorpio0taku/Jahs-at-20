@@ -136,14 +136,34 @@ const panels = document.querySelectorAll('.panel');
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     const target = tab.dataset.tab;
+
+    // Update active tab button immediately
     tabs.forEach(t => {
       t.classList.toggle('is-active', t === tab);
       t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
     });
-    panels.forEach(p => p.classList.toggle('is-active', p.id === target));
+
+    // Fade out current panel
+    const current = document.querySelector('.panel.is-active');
+    if (current) {
+      current.style.opacity = '0';
+      current.style.transition = 'opacity 0.3s ease';
+    }
+
+    // After delay, swap panels and fade in
+    setTimeout(() => {
+      panels.forEach(p => {
+        p.classList.remove('is-active');
+        p.style.opacity = '';
+        p.style.transition = '';
+      });
+      const next = document.getElementById(target);
+      if (next) {
+        next.classList.add('is-active');
+      }
+    }, 500); // 0.5s fade out + pause feels natural — change to 2000 for a full 2s if you prefer
   });
 });
-
 // ============================================
 // Background music
 // ============================================
