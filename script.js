@@ -311,7 +311,25 @@ function buildWishCard(item, index) {
   const card = document.createElement('div');
   card.className = `card wish-card ${pick(ROTATIONS, index)} ${pick(ACCENTS, index)}`;
 
-  card.appendChild(buildVideoMedia(item, item.from + "'s birthday wish"));
+  if (item.type === 'audio') {
+    const audioWrap = document.createElement('div');
+    audioWrap.className = 'audio-wrap';
+
+    const label = document.createElement('p');
+    label.className = 'audio-label';
+    label.textContent = 'Voice message';
+
+    const player = document.createElement('audio');
+    player.controls = true;
+    player.src = item.src;
+    player.addEventListener('play', pauseMusicForVideo);
+
+    audioWrap.appendChild(label);
+    audioWrap.appendChild(player);
+    card.appendChild(audioWrap);
+  } else {
+    card.appendChild(buildVideoMedia(item, item.from + "'s birthday wish"));
+  }
 
   const name = document.createElement('p');
   name.className = 'wish-name';
@@ -324,6 +342,7 @@ function buildWishCard(item, index) {
     note.textContent = item.note;
     card.appendChild(note);
   }
+
   return card;
 }
 
