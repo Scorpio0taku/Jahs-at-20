@@ -36,7 +36,7 @@ const memories = [
   },
   {
     type: 'video',
-    embedUrl: 'https://youtube.com/shorts/LKJhmRRAm94?feature=share',
+    embedUrl: 'https://www.youtube.com/embed/J4zNDn2veqU',
     caption: 'Example video — swap for a real one',
     from: 'Example'
   }
