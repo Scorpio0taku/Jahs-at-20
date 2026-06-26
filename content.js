@@ -61,6 +61,12 @@ const wishes = [
     from: 'Another Friend',
     embedUrl: 'https://drive.google.com/file/d/1lZ2YX10Btsss72nZF4w3gk3IGEwLwNBz/view?usp=drivesdk',
     note: 'Drive videos work here too — replace FILE_ID'
+  },
+  {
+    type: 'audio',
+    from: 'Friend Name',
+    src: 'https://your-audio-link.mp3',
+    note: 'optional short line'
   }
 ];
 
