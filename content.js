@@ -54,7 +54,7 @@ const memories = [
 const wishes = [
   {
     from: 'Example Friend',
-    embedUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    embedUrl: 'https://www.youtube.com/embed/J4zNDn2veqU',
     note: 'Replace with a real birthday video message'
   },
   {
