@@ -306,7 +306,7 @@ main {
    Wishes cards (taller for video messages)
    ============================================ */
 .wish-card .card-media {
-  aspect-ratio: unset;
+  aspect-ratio: 9 / 16;
 }
 
 .wish-name {
