@@ -421,6 +421,11 @@ function openLightbox(src, alt) {
   lightboxImg.alt = alt || '';
   lightbox.classList.add('is-open');
   lightbox.setAttribute('aria-hidden', 'false');
+
+  // Load saved caption if any
+  const saved = localStorage.getItem('caption_' + src);
+  document.getElementById('lightbox-caption-input').value = saved || '';
+
   lightboxClose.focus();
 }
 
@@ -434,6 +439,27 @@ lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+});
+
+document.getElementById('lightbox-caption-save').addEventListener('click', () => {
+  const src = lightboxImg.src;
+  const caption = document.getElementById('lightbox-caption-input').value.trim();
+  if (caption) {
+    localStorage.setItem('caption_' + src, caption);
+    // Also show it on the card below the image
+    const cards = document.querySelectorAll('.card-media img');
+    cards.forEach(img => {
+      if (img.src === src) {
+        let capEl = img.closest('.card').querySelector('.card-caption');
+        if (!capEl) {
+          capEl = document.createElement('p');
+          capEl.className = 'card-caption';
+          img.closest('.card').appendChild(capEl);
+        }
+        capEl.textContent = caption;
+      }
+    });
+  }
 });
 
 // ============================================
