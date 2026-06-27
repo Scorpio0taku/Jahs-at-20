@@ -30,7 +30,7 @@ const guests = [
 const memories = [
   {
     type: 'image',
-    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect width='400' height='400' fill='%23f0dede'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='20' fill='%235c3030' text-anchor='middle' dy='.3em'%3EAdd a photo here%3C/text%3E%3C/svg%3E",
+    src: "https://imgur.com/gallery/seyi-1-EhMsqmI",
     caption: 'A lovely memory',
     from: 'Example'
   },
