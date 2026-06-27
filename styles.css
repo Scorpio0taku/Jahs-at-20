@@ -194,6 +194,14 @@ main {
   border-left: 5px solid var(--red);
 }
 
+.home-note-title {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--red);
+  margin: 0 0 12px;
+}
+
 .home-note p          { margin: 0 0 16px; }
 .home-note p:last-child { margin-bottom: 0; }
 
