@@ -211,6 +211,16 @@ function pauseMusicForVideo() {
   }
 }
 
+// Stop all other media when a new one plays
+function stopAllOtherMedia(current) {
+  document.querySelectorAll('audio, video').forEach(el => {
+    if (el !== current && el.id !== 'bg-audio') {
+      el.pause();
+      el.currentTime = 0;
+    }
+  });
+}
+
 // ============================================
 // Variety helpers
 // ============================================
@@ -247,7 +257,8 @@ function buildVideoMedia(item, label) {
   placeholder.appendChild(playIcon);
 
   placeholder.addEventListener('click', () => {
-    pauseMusicForVideo();           // pause bg music when video loads
+    pauseMusicForVideo();  // pause bg music when video loads
+    stopAllOtherMedia(null);
     const iframe = document.createElement('iframe');
     iframe.src = item.embedUrl;
     iframe.title = label;
@@ -326,7 +337,10 @@ function buildWishCard(item, index) {
     const player = document.createElement('audio');
     player.controls = true;
     player.src = item.src;
-    player.addEventListener('play', pauseMusicForVideo);
+    player.addEventListener('play', () => {
+      pauseMusicForVideo();
+      stopAllOtherMedia(player);
+    });
 
     audioWrap.appendChild(label);
     audioWrap.appendChild(player);
