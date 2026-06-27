@@ -92,9 +92,13 @@ function attemptLogin() {
   if (match) {
     markAuthenticated();
     clearLockout();
-    loginScreen.classList.add('hidden');
     loginError.textContent = '';
     loginLockout.textContent = '';
+    loginBtn.textContent = '✓ Welcome!';
+    loginBtn.disabled = true;
+    setTimeout(() => {
+      loginScreen.classList.add('hidden');
+    }, 1500);
   } else {
     const existing = getLockout() || { attempts: 0, until: null };
     const attempts = existing.attempts + 1;
