@@ -34,9 +34,7 @@ const memories = [
   },
   {
     type: 'video',
-    embedUrl: 'https://www.youtube.com/embed/J4zNDn2veqU',
-    caption: 'Example video — swap for a real one',
-    from: 'Example'
+    embedUrl: 'video/VID-20260621-WA0016.mp4',
   },
   {
     type: 'image',
@@ -92,7 +90,7 @@ const memories = [
 const wishes = [
   {
     from: 'AOG',
-    embedUrl: 'https://www.youtube.com/embed/J4zNDn2veqU?controls=0&modestbranding=1&rel=0',
+    embedUrl: 'video/VID-20260626-WA0000.mp4',
     note: 'HAPPY BIRTHDAY ❤️'
   },
   {
