@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -56,6 +56,7 @@
         <button class="tab"           data-tab="memories" role="tab" aria-selected="false" aria-controls="memories">Memories</button>
         <button class="tab"           data-tab="wishes"   role="tab" aria-selected="false" aria-controls="wishes">Birthday Wishes</button>
         <button class="tab"           data-tab="messages" role="tab" aria-selected="false" aria-controls="messages">Messages</button>
+        <button class="tab tab--upload" data-tab="upload" role="tab" aria-selected="false" aria-controls="upload">Add a Memory</button>
       </nav>
     </header>
 
@@ -104,7 +105,6 @@ Oluwaseyifunmi 💜
           </p>
         </div>
         <div class="home-deco" aria-hidden="true">
-        <div class="home-deco" aria-hidden="true">
           <span class="deco-star">★</span>
           <span class="deco-star small">★</span>
           <span class="deco-star">★</span>
@@ -128,6 +128,24 @@ Oluwaseyifunmi 💜
         <h2 class="section-title rot-3">Messages</h2>
         <div id="messages-grid" class="grid grid--messages"></div>
       </section>
+
+      <!-- UPLOAD -->
+      <section id="upload" class="panel" role="tabpanel">
+        <h2 class="section-title rot-1">Add a Memory</h2>
+        <div class="upload-area">
+          <div class="upload-card rot-2">
+            <p class="upload-intro">Got a photo or video you want to add? Drop it here and it'll appear instantly.</p>
+            <label class="upload-label" for="upload-input">
+              <span class="upload-icon">＋</span>
+              <span>Choose a photo or video</span>
+              <input id="upload-input" type="file" accept="image/*,video/*" />
+            </label>
+            <p id="upload-status" class="upload-status"></p>
+          </div>
+          <div id="upload-preview-grid" class="grid upload-preview-grid"></div>
+        </div>
+      </section>
+
     </main>
   </div>
 
