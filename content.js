@@ -96,6 +96,6 @@ const messages = [
   },
   {
     name: 'Dabira(SNL 2024)',
-    message: 'Happy Birthday Jemima‼️‼️🥳🥳🎊🎊 I pray that you're surrounded with God's unfailing love, that divine wisdom, health and direction is your purpose. I pray that you experience God's favour bountifully, that everything you lay your hand upon prospers and that all your heart's desires that align with God's will for your life is granted. Have an amazing day and prosperous year ahead♥️♥️'
+    message: `Happy Birthday Jemima‼️‼️🥳🥳🎊🎊 I pray that you're surrounded with God's unfailing love, that divine wisdom, health and direction is your purpose. I pray that you experience God's favour bountifully, that everything you lay your hand upon prospers and that all your heart's desires that align with God's will for your life is granted. Have an amazing day and prosperous year ahead♥️♥️`
   }
 ];
