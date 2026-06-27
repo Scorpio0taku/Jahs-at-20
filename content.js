@@ -31,15 +31,37 @@ const memories = [
   {
     type: 'image',
     src: "Images/IMG-20260621-WA0023.jpg",
-    caption: 'A lovely memory',
-    from: 'Example'
   },
   {
     type: 'video',
     embedUrl: 'https://www.youtube.com/embed/J4zNDn2veqU',
     caption: 'Example video — swap for a real one',
     from: 'Example'
-  }
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260621-WA0022.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260621-WA0021.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260621-WA0020.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260621-WA0015.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260621-WA0019.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260621-WA0014.jpg",
+  },
 ];
 
 // ============================================
