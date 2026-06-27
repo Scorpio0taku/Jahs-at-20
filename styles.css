@@ -500,6 +500,32 @@ main {
 }
 
 /* ============================================
+   Audio cards
+   ============================================ */
+.audio-wrap {
+  padding: 16px 4px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.audio-label {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.audio-wrap audio {
+  width: 100%;
+  accent-color: var(--red);
+}
+
+/* ============================================
+   Login screen
+   ============================================ */
+
+/* ============================================
    Login screen
    ============================================ */
 .login-screen {
