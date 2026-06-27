@@ -104,6 +104,22 @@ const memories = [
     type: 'image',
     src: "Images/IMG-20250913-WA0071.jpg",
   },
+  {
+    type: 'image',
+    src: "Images/cbb09242f9c244faae87c21ef76089b9.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG_3470.JPG",
+  },
+  {
+    type: 'image',
+    src: "Images/8ac2a4219ee64755b84d0afc9cdc0ee1.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/4fa38e0c2847491b998983ce7939b2b9.jpg",
+  }
 ];
 
 // ============================================
