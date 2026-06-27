@@ -109,6 +109,12 @@ const wishes = [
     from: 'Morire Temunu',
     src: 'audio/PTT-20260621-WA0008.opus',
     note: ''
+  },
+  {
+    type: 'audio',
+    from: 'Your favourite brother',
+    src: 'audio/06-27-2026 04.10.m4a',
+    note: '4am thoughts'
   }
 ];
 
