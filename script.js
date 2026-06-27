@@ -417,6 +417,75 @@ document.addEventListener('keydown', e => {
 });
 
 // ============================================
+// Upload to Cloudinary
+// ============================================
+const CLOUD_NAME    = 'dx7sgtdun';
+const UPLOAD_PRESET = 'Jahsmine';
+const uploadInput   = document.getElementById('upload-input');
+const uploadStatus  = document.getElementById('upload-status');
+const uploadGrid    = document.getElementById('upload-preview-grid');
+
+uploadInput.addEventListener('change', async () => {
+  const file = uploadInput.files[0];
+  if (!file) return;
+
+  uploadStatus.textContent = 'Uploading...';
+
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('upload_preset', UPLOAD_PRESET);
+  formData.append('folder', 'Birthday');
+
+  try {
+    const isVideo = file.type.startsWith('video/');
+    const endpoint = isVideo
+      ? `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/video/upload`
+      : `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
+
+    const res  = await fetch(endpoint, { method: 'POST', body: formData });
+    const data = await res.json();
+
+    if (data.secure_url) {
+      uploadStatus.textContent = 'Uploaded successfully!';
+      uploadInput.value = '';
+
+      // Show it instantly in the grid
+      const card = document.createElement('div');
+      card.className = `card ${pick(ROTATIONS, uploadGrid.children.length)} ${pick(ACCENTS, uploadGrid.children.length)}`;
+
+      const media = document.createElement('div');
+      media.className = 'card-media';
+
+      if (isVideo) {
+        const vid = document.createElement('video');
+        vid.src = data.secure_url;
+        vid.controls = true;
+        vid.style.width = '100%';
+        vid.style.height = '100%';
+        media.appendChild(vid);
+      } else {
+        const img = document.createElement('img');
+        img.src = data.secure_url;
+        img.alt = 'Your memory';
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => openLightbox(data.secure_url, 'Your memory'));
+        media.appendChild(img);
+      }
+
+      card.appendChild(media);
+      uploadGrid.appendChild(card);
+
+      console.log('Cloudinary URL (save this!):', data.secure_url);
+    } else {
+      uploadStatus.textContent = 'Upload failed. Please try again.';
+    }
+  } catch (err) {
+    uploadStatus.textContent = 'Something went wrong. Check your connection.';
+    console.error(err);
+  }
+});
+
+// ============================================
 // Init
 // ============================================
 renderMemories();
