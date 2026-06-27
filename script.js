@@ -213,12 +213,14 @@ function pauseMusicForVideo() {
 
 // Stop all other media when a new one plays
 function stopAllOtherMedia(current) {
-  document.querySelectorAll('audio, video').forEach(el => {
-    if (el !== current && el.id !== 'bg-audio') {
-      el.pause();
-      el.currentTime = 0;
-    }
-  });
+  setTimeout(() => {
+    document.querySelectorAll('audio, video').forEach(el => {
+      if (el !== current && el.id !== 'bg-audio') {
+        el.pause();
+        el.currentTime = 0;
+      }
+    });
+  }, 100);
 }
 
 // ============================================
