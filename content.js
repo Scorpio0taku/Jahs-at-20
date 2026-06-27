@@ -45,6 +45,10 @@ const memories = [
     src: "Images/IMG-20260621-WA0021.jpg",
   },
   {
+    type: 'video',
+    embedUrl: 'video/3f82ecc691424f1faa9835894f47ee8c.mp4',
+  },
+  {
     type: 'image',
     src: "Images/IMG-20260621-WA0020.jpg",
   },
@@ -61,6 +65,10 @@ const memories = [
     src: "Images/IMG-20260621-WA0014.jpg",
   },
   {
+    type: 'video',
+    embedUrl: 'video/320961755c84405ebe675b98d406b8c0.mp4',
+  },
+  {
     type: 'image',
     src: "Images/IMG-20260624-WA0002.jpg",
   },
@@ -71,6 +79,10 @@ const memories = [
   {
     type: 'image',
     src: "Images/IMG-20260624-WA0005.jpg",
+  },
+  {
+    type: 'video',
+    embedUrl: 'video/2d8774901f5e4f609ece2476930132e0.mp4',
   },
   {
     type: 'image',
