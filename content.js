@@ -93,5 +93,9 @@ const messages = [
   {
     name: 'Ethan',
     message: 'Happy birthday to someone truly special! Its amazing to have you in my life, and I hope today is as wonderful and bright as you are. Wishing you all the joy, laughter, and unforgettable moments today and always.May this year bring you endless happiness, exciting adventures, and all the things your heart desires. Thank you for being you – a constant source of light and inspiration. Sending you the biggest birthday wishes and lots of love! Happy birthday Jahsmine ❤️❤️❤️'
+  },
+  {
+    name: 'Dabira(SNL 2024)',
+    message: 'Happy Birthday Jemima‼️‼️🥳🥳🎊🎊 I pray that you're surrounded with God's unfailing love, that divine wisdom, health and direction is your purpose. I pray that you experience God's favour bountifully, that everything you lay your hand upon prospers and that all your heart's desires that align with God's will for your life is granted. Have an amazing day and prosperous year ahead♥️♥️'
   }
 ];
