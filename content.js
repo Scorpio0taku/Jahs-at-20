@@ -76,6 +76,34 @@ const memories = [
     type: 'image',
     src: "Images/IMG-20260624-WA0004.jpg",
   },
+  {
+    type: 'image',
+    src: "Images/IMG-20240825-WA0046.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20240827-WA0132(1).jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20240827-WA0199.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20240827-WA0201.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20250825-WA0018.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20250825-WA0070.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20250913-WA0071.jpg",
+  },
 ];
 
 // ============================================
