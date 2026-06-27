@@ -62,6 +62,22 @@ const memories = [
     type: 'image',
     src: "Images/IMG-20260621-WA0014.jpg",
   },
+  {
+    type: 'image',
+    src: "Images/IMG-20260624-WA0002.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260624-WA0003.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260624-WA0005.jpg",
+  },
+  {
+    type: 'image',
+    src: "Images/IMG-20260624-WA0004.jpg",
+  },
 ];
 
 // ============================================
