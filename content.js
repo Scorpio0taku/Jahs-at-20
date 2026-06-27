@@ -65,7 +65,13 @@ const wishes = [
   {
     type: 'audio',
     from: 'Friend Name',
-    src: 'https://your-audio-link.mp3',
+    src: 'audio/PTT-20260624-WA0023.mp3',
+    note: 'optional short line'
+  },
+  {
+    type: 'audio',
+    from: 'Friend Name',
+    src: 'audio/PTT-20260621-WA0008.opus',
     note: 'optional short line'
   }
 ];
