@@ -57,6 +57,10 @@ const memories = [
     src: "Images/IMG-20260621-WA0015.jpg",
   },
   {
+    type: 'video',
+    embedUrl: 'video/InShot_20260627_045911980.mp4',
+  },
+  {
     type: 'image',
     src: "Images/IMG-20260621-WA0019.jpg",
   },
@@ -97,6 +101,10 @@ const memories = [
     src: "Images/IMG-20240827-WA0132(1).jpg",
   },
   {
+    type: 'video',
+    embedUrl: 'video/VID-20251225-WA0018.mp4',
+  },
+  {
     type: 'image',
     src: "Images/IMG-20240827-WA0199.jpg",
   },
@@ -109,6 +117,10 @@ const memories = [
     src: "Images/IMG-20250825-WA0018.jpg",
   },
   {
+    type: 'video',
+    embedUrl: 'video/VID-20251225-WA0017.mp4',
+  },
+  {
     type: 'image',
     src: "Images/IMG-20250825-WA0070.jpg",
   },
@@ -117,12 +129,20 @@ const memories = [
     src: "Images/IMG-20250913-WA0071.jpg",
   },
   {
+    type: 'video',
+    embedUrl: 'video/VID-20251225-WA0016.mp4',
+  },
+  {
     type: 'image',
     src: "Images/cbb09242f9c244faae87c21ef76089b9.jpg",
   },
   {
     type: 'image',
     src: "Images/IMG_3470.JPG",
+  },
+  {
+    type: 'video',
+    embedUrl: 'video/VID-20251224-WA0034.mp4',
   },
   {
     type: 'image',
