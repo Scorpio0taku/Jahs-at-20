@@ -30,7 +30,7 @@ const guests = [
 const memories = [
   {
     type: 'image',
-    src: "https://imgur.com/gallery/seyi-1-EhMsqmI",
+    src: "Images/IMG-20260621-WA0023.jpg",
     caption: 'A lovely memory',
     from: 'Example'
   },
