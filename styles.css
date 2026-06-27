@@ -604,6 +604,31 @@ main {
    ============================================ */
 
 /* ============================================
+   Feedback button
+   ============================================ */
+.feedback-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 20;
+  background: var(--paper);
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px var(--shadow);
+}
+
+/* ============================================
+   Login screen
+   ============================================ */
+
+/* ============================================
    Login screen
    ============================================ */
 .login-screen {
