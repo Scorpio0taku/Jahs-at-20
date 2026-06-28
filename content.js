@@ -215,5 +215,27 @@ const messages = [
   {
     name: 'Dabira(SNL 2024)',
     message: `Happy Birthday Jemima‼️‼️🥳🥳🎊🎊 I pray that you're surrounded with God's unfailing love, that divine wisdom, health and direction is your purpose. I pray that you experience God's favour bountifully, that everything you lay your hand upon prospers and that all your heart's desires that align with God's will for your life is granted. Have an amazing day and prosperous year ahead♥️♥️`
+  },
+  {
+    name: 'Inioluwa Folowosele',
+    message: ` Dear Jahsmine,
+
+I write this letter to pay homage to someone who has been an indescribable gift in my life.
+
+You are such a wonderful, caring, and intentional soul. I count myself blessed to call you my dearest friend.
+
+I’m grateful that our paths crossed, and even more grateful for every memory we’ve shared since then: the support, the prayers, the long calls, the games, the moments we’ve stood up for each other, the words of affirmation. The gift of you is one I will never take for granted.
+
+Thank you for saying yes to the Lord. Thank you for choosing to walk this path with Him. Thank you for not giving up. Thank you for putting in the effort, for showing up, and for being who you are.
+
+I just want you to know that I love you deeply. I appreciate you, and I value you beyond words.
+
+My prayer for you is that you experience God’s very best in every season of your life. I pray that every dream He has placed within you and every destiny He has ordained for you will be fulfilled in Jesus’ name. I pray that your impact on this world will echo from generation to generation and that your life will stand as a testimony of God’s grace and faithfulness.
+
+Thank you for being one of God’s kindest gifts to me.
+
+With love and gratitude,
+
+HAPPY BIRTHDAY JAHS❤️ `
   }
 ];
